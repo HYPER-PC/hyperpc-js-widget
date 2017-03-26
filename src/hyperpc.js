@@ -52,6 +52,60 @@
         },
 
         /**
+         * Open page loader.
+         *
+         * @private
+         */
+        _openLoader : function () {
+            var loaderHtml =
+                '<div class="hpLoader">' +
+                    '<div class="hpLoaderWrapper">' +
+                        '<img src="/media/com_hyperpc/img/loader/loader64x64.gif" class="hpLoaderImage" />' +
+                    '</div>' +
+                '</div>';
+            $('body').addClass('hpLoading').prepend(loaderHtml);
+        },
+
+        /**
+         * Hide page loader.
+         *
+         * @private
+         */
+        _hideLoader : function () {
+            var body = $('body');
+            if (body.hasClass('hpLoading')) {
+                body.removeClass('hpLoading');
+                $('.hpLoader').remove();
+            }
+        },
+
+        /**
+         * Number animate.
+         *
+         * @param selector
+         * @param number
+         * @param duration
+         * @private
+         */
+        _animateNumber : function (selector, number, duration) {
+            if (duration == undefined) {
+                duration = 500;
+            }
+
+            $(selector).html(number).each(function () {
+                $(this).prop('Counter', 0).animate({
+                    Counter : $(this).html()
+                }, {
+                    duration : duration,
+                    easing   : 'swing',
+                    step: function (now) {
+                        $(this).html(Math.ceil(now));
+                    }
+                });
+            });
+        },
+
+        /**
          * Custom ajax handler
          *
          * @param options = {
@@ -210,7 +264,7 @@
                     title            : message,
                     //animation        : false,
                     allowOutsideClick: true,
-                    confirmButtonText: JBZoo.getVar('JBZOO_DIALOGBOX_OK', 'OK')
+                    confirmButtonText: 'OK'
                 }, $this._def(params, {}));
 
                 _swal(params, closeCallback);
@@ -247,8 +301,8 @@
                         closeOnConfirm   : true,
                         closeOnCancel    : true,
                         allowOutsideClick: false,
-                        confirmButtonText: JBZoo.getVar('JBZOO_DIALOGBOX_OK', 'OK'),
-                        cancelButtonText : JBZoo.getVar('JBZOO_DIALOGBOX_CANCEL', 'Cancel')
+                        confirmButtonText: 'OK',
+                        cancelButtonText : 'Отмена'
                     },
                     function (isConfirm) {
                         if (isConfirm) {
