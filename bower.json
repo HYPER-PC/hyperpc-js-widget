@@ -1,0 +1,22 @@
+{
+    "name"        : "hyperpc-js-widget",
+    "description" : "HYPERPC jQuery base widget",
+    "main"        : [
+        "src/hyperpc.js"
+    ],
+    "author"    : [
+        "Sergey Kalistratov <kalistratov.s.m@gmail.com>"
+    ],
+    "license"   : "MIT",
+    "keywords"  : [
+        "jquery",
+        "factory",
+        "hyperpc"
+    ],
+    "homepage"      : "https://github.com/HYPER-PC/hyperpc-js-widget",
+    "dependencies"  : {
+        "jquery"                : "*",
+        "jbzoo-utils"           : "*",
+        "jbzoo-jquery-factory"  : "*"
+    }
+}
