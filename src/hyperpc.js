@@ -58,8 +58,8 @@
          */
         _openLoader : function () {
             var loaderHtml =
-                '<div class="hpLoader">' +
-                    '<div class="hpLoaderWrapper">' +
+                '<div class="hp-loader">' +
+                    '<div class="hp-loader-wrapper">' +
                         '<img src="/media/hyperpc/img/loaders/loader-black64x64.gif" class="hp-loader-image" />' +
                     '</div>' +
                 '</div>';
