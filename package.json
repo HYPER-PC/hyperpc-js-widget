@@ -2,7 +2,7 @@
     "name"                 : "hyperpc-js-widget",
     "description"          : "HYPERPC jQuery base widget",
     "license"              : "MIT",
-    "version"              : "1.0.0",
+    "version"              : "2.0.0",
     "keywords"             : [
         "jquery",
         "factory",

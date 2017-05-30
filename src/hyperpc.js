@@ -36,7 +36,7 @@
          */
         _onAjaxStart: function (options) {
             var $target = (options.target) ? $(options.target) : this.el;
-            $target.addClass('hpLoading');
+            $target.addClass('hp-loading');
         },
 
         /**
@@ -48,7 +48,7 @@
          */
         _onAjaxStop: function (options, args) {
             var $target = (options.target) ? $(options.target) : this.el;
-            $target.removeClass('hpLoading');
+            $target.removeClass('hp-loading');
         },
 
         /**
@@ -60,7 +60,7 @@
             var loaderHtml =
                 '<div class="hpLoader">' +
                     '<div class="hpLoaderWrapper">' +
-                        '<img src="/media/com_hyperpc/img/loader/loader64x64.gif" class="hpLoaderImage" />' +
+                        '<img src="/media/hyperpc/img/loaders/loader-black64x64.gif" class="hp-loader-image" />' +
                     '</div>' +
                 '</div>';
             $('body').addClass('hpLoading').prepend(loaderHtml);
@@ -73,8 +73,8 @@
          */
         _hideLoader : function () {
             var body = $('body');
-            if (body.hasClass('hpLoading')) {
-                body.removeClass('hpLoading');
+            if (body.hasClass('hp-loading')) {
+                body.removeClass('hp-loading');
                 $('.hpLoader').remove();
             }
         },
