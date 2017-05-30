@@ -63,7 +63,7 @@
                         '<img src="/media/hyperpc/img/loaders/loader-black64x64.gif" class="hp-loader-image" />' +
                     '</div>' +
                 '</div>';
-            $('body').addClass('hpLoading').prepend(loaderHtml);
+            $('body').addClass('hp-ajax').prepend(loaderHtml);
         },
 
         /**
@@ -73,9 +73,9 @@
          */
         _hideLoader : function () {
             var body = $('body');
-            if (body.hasClass('hp-loading')) {
-                body.removeClass('hp-loading');
-                $('.hpLoader').remove();
+            if (body.hasClass('hp-ajax')) {
+                body.removeClass('hp-ajax');
+                $('.hp-loader').remove();
             }
         },
 
