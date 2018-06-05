@@ -1,5 +1,6 @@
 {
     "name"        : "hyperpc-js-widget",
+    "version"     : "3.0.4",
     "description" : "HYPERPC jQuery base widget",
     "main"        : [
         "src/hyperpc.js"
