@@ -134,7 +134,7 @@
             //JBZoo.logger('w', 'ajax::' + globalAjaxId + ' ->', options);
 
             var options = $.extend(true, {}, {
-                'url'     : 'index.php?format=raw&tmpl=component',
+                'url'     : '/index.php?format=raw&tmpl=component',
                 'data'    : {
                     'rand'  : JBZoo.rand(100, 999), // forced no cache
                     'option': 'com_hyperpc',
